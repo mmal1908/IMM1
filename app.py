@@ -44,7 +44,7 @@ st.write('Sólo dos americanos había en aquel hotel. No conocían a ninguna de 
 'Los italianos venían de lejos para contemplar el monumento a la guerra, hecho de bronce que resplandecía bajo la lluvia. El agua se deslizaba por las palmeras y formaba charcos en los senderos de piedra. Las olas se rompían en una larga línea y el mar se retiraba de la playa, para regresar y volver a romperse bajo la lluvia. Los automóviles se alejaron de la plaza donde estaba el monumento. Del otro lado, a la entrada de un café, un mozo estaba contemplando el lugar ahora solitario....')
            
 st.markdown(f"¿Quieres escucharlo?")
-text = st.text_area("Copia el texto que quieras escuchar en el cuadro abajo")
+text = st.text_area("Copia el texto que quieras escuchar en el cuadro")
 
 tld='com'
 option_lang = st.selectbox(
