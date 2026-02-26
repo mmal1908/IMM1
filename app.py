@@ -25,9 +25,9 @@ def sidebar_bg(image_file):
         unsafe_allow_html=True
     )
 
-sidebar_bg("gato2}.jpg")
+sidebar_bg("gato1.jpg")
 st.title("Conversión de Texto a Audio")
-image = Image.open('gato1.jpg')
+image = Image.open('gato2}.jpg')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Esrcibe, pega o selecciona texto de esta página para ser escuchado.")
