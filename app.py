@@ -25,7 +25,7 @@ def sidebar_bg(image_file):
         unsafe_allow_html=True
     )
 
-sidebar_bg("gato1.jpg")
+sidebar_bg("gato2}.jpg")
 st.title("Conversión de Texto a Audio")
 image = Image.open('gato1.jpg')
 st.image(image, width=350)
@@ -38,18 +38,13 @@ try:
 except:
     pass
 
-st.subheader("Una pequeña Fábula.")
-st.write('¡Ay! -dijo el ratón-. El mundo se hace cada día más pequeño. Al principio era tan grande que le tenía miedo. '  
-         ' Corría y corría y por cierto que me alegraba ver esos muros, a diestra y siniestra, en la distancia. ' 
-         ' Pero esas paredes se estrechan tan rápido que me encuentro en el último cuarto y ahí en el rincón está '  
-         ' la trampa sobre la cual debo pasar. Todo lo que debes hacer es cambiar de rumbo dijo el gato...y se lo comió. ' 
-         '  '
-         ' Franz Kafka.'
-        
-        )
+st.subheader("Fragmento de El Gato Bajo la Lluvia de Ernest Hemingway")
+st.write('Sólo dos americanos había en aquel hotel. No conocían a ninguna de las personas que subían y bajaban por las escaleras hacia y desde sus habitaciones. La suya estaba en el segundo piso, frente al mar y al monumento de la guerra, en el jardín público de grandes palmeras y verdes bancos. Cuando hacía buen tiempo, no faltaba algún pintor con su caballete. A los artistas les gustaban aquellos árboles y los brillantes colores de los hoteles situados frente al mar.
+
+Los italianos venían de lejos para contemplar el monumento a la guerra, hecho de bronce que resplandecía bajo la lluvia. El agua se deslizaba por las palmeras y formaba charcos en los senderos de piedra. Las olas se rompían en una larga línea y el mar se retiraba de la playa, para regresar y volver a romperse bajo la lluvia. Los automóviles se alejaron de la plaza donde estaba el monumento. Del otro lado, a la entrada de un café, un mozo estaba contemplando el lugar ahora solitario....')
            
-st.markdown(f"Quieres escucharlo?, copia el texto")
-text = st.text_area("Ingrese El texto a escuchar.")
+st.markdown(f"¿Quieres escucharlo?")
+text = st.text_area("Copia el texto que quieras escuchar en el cuadro abajo")
 
 tld='com'
 option_lang = st.selectbox(
@@ -73,7 +68,7 @@ def text_to_speech(text, tld,lg):
 
 #display_output_text = st.checkbox("Verifica el texto")
 
-if st.button("convertir a Audio"):
+if st.button("Convertir a audio"):
      result, output_text = text_to_speech(text, 'com',lg)#'tld
      audio_file = open(f"temp/{result}.mp3", "rb")
      audio_bytes = audio_file.read()
